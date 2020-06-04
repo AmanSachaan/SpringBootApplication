@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Dishes</title>
+</head>
+<body>
+<h1 align="center"> <b> <i> <big> The Menu is </big></i></b></h1>
+<br>
+<tr th:each="dish: ${dishes}" align="center">
+
+  <h4 align="center"><td th:text ="${dish[0]}"></td> is
+      <td th:text ="${dish[1]}"></td>  Rupees</h4>
+    <br>
+</tr>
+
+
+
+</body>
+</html>

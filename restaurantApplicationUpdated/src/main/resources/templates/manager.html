@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Waiter</title>
+</head>
+<body>
+<h1 align="center"><b><i>This is a Manager page</i></b></h1>
+<h2 align="center"> Please enter the name of the customer to generate his bill and then press Generate Bill.
+</h2>
+<form align="center" action="#" th:action="@{/manager/generateBill}" method="post" >
+    <label>Name </label>
+    <input type="text" th:name="customerName" required /><br/><br>
+    <button type="submit" >Generate Bill</button>
+    </form>
+</body>
+</html>

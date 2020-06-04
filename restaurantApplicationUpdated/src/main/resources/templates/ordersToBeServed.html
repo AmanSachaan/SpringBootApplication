@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Orders To Be Served</title>
+</head>
+<body>
+<h1 align="center"><i><b>The orders to be served are as follows
+</b></i></h1>
+
+<br>
+<tr th:each="order : ${orders}">
+<h2 align="center"><td th:text ="${order[0]}"></td> has ordered
+<td th:text="${order[1]}"></td>
+</h2>
+    <br>
+</tr>
+</body>
+</html>

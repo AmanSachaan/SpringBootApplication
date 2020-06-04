@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+<title>DineOut Restaurant Homepage</title>
+
+</head>
+<h1 align="center"> <b><i><big>Welcome To Nueva</big></i></b></h1>
+<body>
+
+<div class="icfl" id="img1"> <a th:href="@{/getDishes}"><h2>Display Menu</h2></a>
+    <div class="icfl" id="img2"> <a th:href="@{/manager}"><h2>Manager</h2></a></div>
+    <div class="icfl" id="img3"> <a th:href="@{/waiter}"><h2>Waiter</h2></a></div>
+    <div class="icfl" id="img4"> <a th:href="@{/owner}"><h2>Owner</h2></a></div>
+
+    <img th:src="@{images/Restaurant1.jpg}" width="1300",height="600" align="center">
+    <img th:src="@{images/Restaurant2.jpg}" width="1300",height="600" align="center">
+</div>
+
+</body>
+</html>

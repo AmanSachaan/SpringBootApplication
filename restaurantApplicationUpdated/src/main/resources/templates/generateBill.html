@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Bill</title>
+</head>
+<body>
+<br>
+<tr th:each="b : ${bill}">
+   <h2 align="center"><i> The bill generated for
+    <td th:text ="${b[0]}"></td> is
+    <td th:text ="${b[1]}"></td>
+    Rupees
+   </i></h2>
+</tr>
+
+
+
+</body>
+</html>
