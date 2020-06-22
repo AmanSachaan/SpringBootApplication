@@ -31,8 +31,11 @@ public class ManagerController {
     {
         ModelAndView modelAndView =new ModelAndView();
         List<Object[]> billList=dishRepository.generateBill(customerName);
+        List<Object[]> billDishes=dishRepository.generateBillWithDishes(customerName);
         modelAndView.addObject("bill",billList);
-        if(billList.size()==0)
+        modelAndView.addObject("billDishes",billDishes);
+        System.out.println(billList.get(0)[0]);
+        if(billList.get(0)[0]==null)
         modelAndView.setViewName("invalidName");
         else
         modelAndView.setViewName("generateBill");

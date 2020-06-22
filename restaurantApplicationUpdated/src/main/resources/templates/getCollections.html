@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Bill</title>
+</head>
+<body>
+<br>
+
+
+
+<tr th:each="b : ${collections}">
+    <h2 align="center"><i> The total collections are
+        <td th:text ="${b[0]}"></td>
+        Rupees
+    </i></h2>
+</tr>
+
+<div style="text-align:center">
+    <a th:href="@{/}" ><h2><button>Go to Home</button></h2></a>
+</div>
+    <div style="text-align:center">
+        <a th:href="@{/owner}" ><h2><button>Try with other Dates</button></h2></a>
+    </div>
+
+
+</body>
+</html>

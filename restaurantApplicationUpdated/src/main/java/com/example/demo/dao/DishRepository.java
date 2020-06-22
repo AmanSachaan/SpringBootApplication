@@ -16,4 +16,9 @@ public interface DishRepository extends JpaRepository<Dish, String> {
 
       @Query(value = "select dish_name,dish_cost from dish",nativeQuery = true)
       List<Object[]> findAllDishes();
+
+      @Query(value = "select dish.dish_name, dish_cost from dish inner join orders where dish.dish_name=orders.dish_name and orders.customer_name=?1",nativeQuery = true)
+      List<Object[]> generateBillWithDishes(String customerName);
+
+
 }

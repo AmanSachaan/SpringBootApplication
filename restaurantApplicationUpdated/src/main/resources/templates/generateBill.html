@@ -6,15 +6,50 @@
 </head>
 <body>
 <br>
+<h2 align="center"><b><i> The Cost of each item is as follows</i></b></h2>
+
+
+
+<table align="center" border="1" cellpadding="10">
+    <thead>
+    <tr>
+        <th><h2><b>Dish</b></h2></th>
+        <th><h2><b>Cost</b></h2></th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr  th:each="dish : ${billDishes}">
+
+        <td><h2 th:text ="${dish[0]}"></h2></td>
+        <td><h2 th:text ="${dish[1]}"></h2></td>
+
+
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
 <tr th:each="b : ${bill}">
-   <h2 align="center"><i> The bill generated for
-    <td th:text ="${b[0]}"></td> is
-    <td th:text ="${b[1]}"></td>
-    Rupees
-   </i></h2>
+    <h2 align="center"><i> The total bill generated for
+        <td th:text ="${b[0]}"></td> is
+        <td th:text ="${b[1]}"></td>
+        Rupees
+    </i></h2>
 </tr>
 
 
 
+<div style="text-align:center">
+    <a th:href="@{/}" ><h2><button>Go to Home</button></h2></a>
+    <div style="text-align:center">
+        <a th:href="@{/manager}" ><h2><button>Generate Another Bill</button></h2></a>
+
+</div>
 </body>
 </html>

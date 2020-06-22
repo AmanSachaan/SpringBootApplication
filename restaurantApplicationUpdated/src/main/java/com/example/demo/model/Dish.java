@@ -7,6 +7,8 @@ import java.util.List;
 @Table(name="dish")
 public class Dish {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    private int dishId;
     private String dishName;
     private int dishCost;
     @OneToMany(targetEntity = Orders.class)
@@ -29,5 +31,19 @@ public class Dish {
         this.dishCost = dishCost;
     }
 
+    public int getDishId() {
+        return dishId;
+    }
 
+    public void setDishId(int dishId) {
+        this.dishId = dishId;
+    }
+
+    public List<Orders> getOrders() {
+        return orders;
+    }
+
+    public void setOrders(List<Orders> orders) {
+        this.orders = orders;
+    }
 }

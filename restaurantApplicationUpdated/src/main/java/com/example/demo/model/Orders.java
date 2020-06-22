@@ -9,7 +9,7 @@ import java.sql.Date;
 @Table(name="orders")
 public class Orders {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private int orderId;
     private String customerName;
     //@ManyToOne(fetch = FetchType.LAZY)

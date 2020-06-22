@@ -25,6 +25,13 @@ public class RestaurantController {
         //modelAndView.addObject()
         return "home";
     }
+    @RequestMapping("/login")
+    public String login()
+    {
+        //ModelAndView modelAndView=new ModelAndView("h");
+        //modelAndView.addObject()
+        return "login";
+    }
 
 
     @RequestMapping("/getDishes")

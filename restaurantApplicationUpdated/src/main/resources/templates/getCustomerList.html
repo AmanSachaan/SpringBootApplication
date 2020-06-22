@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Get Dishes</title>
+    <title>Get Customer List</title>
 </head>
 <body>
 <h1 align="center"> <b> <i> <big> The Menu is </big></i></b></h1>
@@ -10,23 +10,23 @@
 
 <table align="center" border="1" cellpadding="10">
 
-<thead>
-<tr>
-    <th><h2><b>Dish</b></h2></th>
-    <th><h2><b>Cost</b></h2></th>
-
-</tr>
-</thead>
-<tbody>
+    <thead>
+    <tr>
+        <th><h2><b>Customer Name</b></h2></th>
 
 
+    </tr>
+    </thead>
+    <tbody>
 
-<tr th:each="dish: ${dishes}" align="center">
 
-    <td><h3 th:text ="${dish[0]}"></h3></td>
-    <td><h3 th:text ="${dish[1]}"></h3></td>
-</tr>
-</tbody>
+
+    <tr th:each="customer: ${customerList}" align="center">
+
+        <td><h3 th:text ="${customer[0]}"></h3></td>
+
+    </tr>
+    </tbody>
 </table>
 
 <div style="text-align:center">

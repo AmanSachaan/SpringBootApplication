@@ -7,10 +7,25 @@
 </head>
 <body>
 <h1 align="center"><b><i>This is a Owner page</i></b></h1>
-<h2 align="center"> Please enter the dates to get the Total collections
+<h2 align="center"> Please enter the dates to get the Collections.
+    <br>
+    Enter the Dates in YYYY-MM-DD format only
 </h2>
-<h2 align="center"> This Page is under Construction
-</h2>
+<form align="center" action="#" th:action="@{/owner/getCollections}" method="post" >
+    <label>From </label>
+    <input type="text" th:name="fromDate" placeholder="YYYY-MM-DD" required /><br/><br>
+    <label>To </label>
+    <input type="text" th:name="toDate"  placeholder="YYYY-MM-DD" required /><br/><br>
 
+    <button type="submit" >Get Collections</button>
+</form>
+<br>
+<br>
+<br>
+<br>
+<h2 align="center"> Click below to get the list of customers visited the restaurant
+    <br>
+</h2>
+<h2 align="center"><b><a th:href="@{/owner/getCustomerList}"><button>Display Customer List</button></a></b></h2>
 </body>
 </html>
